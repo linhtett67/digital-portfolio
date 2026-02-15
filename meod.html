@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meod E-commerce App</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    .project-page {
+      color: #f5f5f5;
+      font-family: 'Roboto', sans-serif;
+      padding: 60px 20px;
+      background-color: #0f111a;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .project-page h1 {
+      color: #00ffd5;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .project-page img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .project-tech {
+      font-size: 1rem;
+      color: #00ffd5;
+      margin-bottom: 40px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00ffd5;
+      color: #0f111a;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #00bfa1;
+    }
+  </style>
+  <script>
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</head>
+<body>
+  <div class="project-page">
+    <h1>E-commerce Web App (Staff-side)</h1>
+    <img src="assets/meod/orders_page.png" alt="Meod App Screenshot">
+    <p class="project-description">
+      This is a full-stack e-commerce web application designed for Meod Farm. 
+      It allows staff to manage orders, track inventory, and streamline 
+      day-to-day business operations through an intuitive interface.
+    </p>
+    <p class="project-tech">
+      Technologies used: HTML, CSS, JavaScript, PHP, MySQL, Bootstrap
+    </p>
+    <a class="back-btn" href="home.html">← Back to Home</a>
+  </div>
+</body>
+</html>

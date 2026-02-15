@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        function navigateTo(url) {
+      window.location.href = url;
+    }
+    </script>
+</head>
+<body>
+    <section class="projects-overview">
+      <h2>My Projects</h2>
+      <div class="projects-container">
+
+        <!-- Project 1 -->
+        <div class="project-card" onclick="navigateTo('primers.html')">
+          <img src="assets/nyp_primers/home.png" alt="Project 1 Screenshot">
+          <div class="project-info">
+            <h3>Public Website for NYP Primers</h3>
+            <p>A website for school CCA club NYP Primers</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" onclick="navigateTo('meod.html')">
+          <img src="assets/meod/orders_page.png" alt="Project 2 Screenshot">
+          <div class="project-info">
+            <h3>E-commerce Web App (Staff-side)</h3>
+            <p>A full-stack e-commerce web application tailored to Meod Farm’s business workflow</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+</body>
+</html>

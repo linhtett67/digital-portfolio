@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYP Primers Project</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    body {
+      background-color: #0f111a;
+      font-family: 'Roboto', sans-serif;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .project-page {
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Top bar with back button and title */
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .back-btn {
+      padding: 10px 20px;
+      background-color: #00ffd5;
+      color: #0f111a;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #00bfa1;
+    }
+
+    .project-title {
+      text-align: center;
+      flex: 1;
+      font-size: 2.5rem;
+      color: #00ffd5;
+      margin: 0;
+    }
+    .project-overview h2, .section-overview h2{
+        color: #00ffd5;
+    }
+
+    /* Image + description side by side */
+    .project-row{
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    /* flip layout for every even row */
+    .page-content > .project-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .project-row .img-container {
+        width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .project-row .img-container img{
+        width: 100%;
+    }
+
+    .image-description {
+        width: 100%;
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .project-tech {
+      color: #00ffd5;
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .project-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .project-title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="project-page">
+
+    <div class="project-header">
+      <a class="back-btn" href="index.html">← Back</a>
+      <h1 class="project-title">Public Website for NYP Primers</h1>
+    </div>
+
+    <div class="project-overview">
+        <h2>Project description</h2>
+        <p class="image-description">
+                This project is a public website for NYP Primers, a school CCA club. <br>
+                The target users of this website are new NYP students who want to know more about NYP Primers
+                and the members (to enroll/ withdraw from events). 
+                The purpose of this website is to showcase what NYP is and to facilitate club activities. <br>
+                The color theme used in this website is the sunset color, which reflects the warmth of the NYP Primers. <br>
+                This project includes a login form and a total of four pages: home page, about us page, events page, and account details page. <br>
+                This is just a front-end website, and everything here is hard-coded.
+        </p>
+    </div>
+
+    
+
+    <div class="project-content">
+        <div class="section-overview">
+            <h2>Home Page</h2>
+            <p class="image-description">
+                The home page is designed to give an overview of what NYP Primers is and a little sneak peek into other pages.
+            </p>
+            <div class="page-content">
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/home.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        This is the landing page of the website, and this section of the home page is to give the users a brief explanation of what NYP Primers is.
+                        Two call-to-action buttons "Join Us" can be found, prompting the user to join NYP Primers club.                
+                      </p>
+
+                    </div>   
+                </div>
+            
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/home-what-we-are.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        Scrolling down, users will see this 'What We Are' section, which is a sneak peek of the 'About Us' page.
+                        Clicking the 'Learn More' button will lead the user to the 'About Us' page.            
+                      </p>
+
+                    </div>   
+                </div>
+            
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/home-events.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        Scrolling further down, users will be greeted with this 'Events' section, a sneak peek of the 'Events' page.
+                        Clicking on the event cards will lead the user to their respective sections at the 'Events' page.
+                        Then, the footer can be seen marking the end of the 'Home' page.          
+                      </p>
+
+                    </div>   
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="section-overview">
+            <h2>About Us Page</h2>
+            <p class="image-description">
+                Sign up form, which can be called by pressing 'Join Us' button and the user account page are included in this section.
+            </p>
+        </div>
+
+        <div class="section-overview">
+            <h2>Events Page</h2>
+            <p class="image-description">
+                Sign up form, which can be called by pressing 'Join Us' button and the user account page are included in this section.
+            </p>
+        </div>
+
+        <div class="section-overview">
+            <h2>Account Details Page</h2>
+            <p class="image-description">
+                Sign up form, which can be called by pressing 'Join Us' button and the user account page are included in this section.
+            </p>
+
+            <div class="page-content">
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/login.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        This is the sign up form, for those who want to join NYP Primers club. 
+                        This is not a typical sign up form that helps users create an account. 
+                        Instead, submitting this form will send an application form to NYP Primers, and the user will become a member if  approved.
+                      </p>
+
+                    </div>   
+                </div>
+            
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/account-details.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        This is the account details page, where members of the club can see their details and the CCA points they have earned.
+                        The CCA point system is designed in accordance with NYP CCA point system (PEARLS).
+                      </p>
+
+                    </div>   
+                </div>
+            
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/account-table.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        This is the account details page, where members of the club can see their details and the CCA points they have earned.
+                        The CCA point system is designed in accordance with NYP CCA point system (PEARLS).
+                      </p>
+
+                    </div>   
+                </div>
+            </div>
+        </div>
+
+
+      
+    </div>
+
+    <p class="project-tech">
+                Technologies used: HTML, CSS, JavaScript, Bootstrap
+              </p>
+
+  </div>
+</body>
+</html>
