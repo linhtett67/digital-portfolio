@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f111a;
+  font-family: 'Roboto', sans-serif;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+.project-page {
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+/* Top bar with back button and title */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.back-btn {
+  padding: 10px 20px;
+  background-color: #00ffd5;
+  color: #0f111a;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.back-btn:hover {
+  background-color: #00bfa1;
+}
+.project-title {
+  text-align: center;
+  flex: 1;
+  font-size: 2.5rem;
+  color: #00ffd5;
+  margin: 0;
+}
+.project-overview h2, .section-overview h2{
+    color: #00ffd5;
+}
+/* Image + description side by side */
+.project-row{
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* flip layout for every even row */
+.page-content > .project-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.project-row .img-container {
+    width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.project-row .img-container img{
+    width: 100%;
+}
+.image-description {
+    width: 100%;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+a{
+    all: unset;
+    cursor: pointer;
+}
+#overview-img-container{
+    height: 450px;
+}
+img {
+    border-radius: 12px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .project-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

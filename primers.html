@@ -5,103 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NYP Primers Project</title>
   <link rel="stylesheet" href="home.css">
-  <style>
-    body {
-      background-color: #0f111a;
-      font-family: 'Roboto', sans-serif;
-      color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-
-    .project-page {
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    /* Top bar with back button and title */
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .back-btn {
-      padding: 10px 20px;
-      background-color: #00ffd5;
-      color: #0f111a;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .back-btn:hover {
-      background-color: #00bfa1;
-    }
-
-    .project-title {
-      text-align: center;
-      flex: 1;
-      font-size: 2.5rem;
-      color: #00ffd5;
-      margin: 0;
-    }
-    .project-overview h2, .section-overview h2{
-        color: #00ffd5;
-    }
-
-    /* Image + description side by side */
-    .project-row{
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-      justify-content: space-between;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    /* flip layout for every even row */
-    .page-content > .project-row:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .project-row .img-container {
-        width: 100%;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .project-row .img-container img{
-        width: 100%;
-    }
-
-    .image-description {
-        width: 100%;
-      font-size: 1.1rem;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    .project-tech {
-      color: #00ffd5;
-      margin-top: 20px;
-      font-size: 1rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .project-row {
-        flex-direction: column;
-        gap: 20px;
-      }
-      .project-title {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="project-page">
@@ -112,27 +16,62 @@
     </div>
 
     <div class="project-overview">
-        <h2>Project description</h2>
-        <p class="image-description">
-                This project is a public website for NYP Primers, a school CCA club. <br>
-                The target users of this website are new NYP students who want to know more about NYP Primers
-                and the members (to enroll/ withdraw from events). 
-                The purpose of this website is to showcase what NYP is and to facilitate club activities. <br>
-                The color theme used in this website is the sunset color, which reflects the warmth of the NYP Primers. <br>
-                This project includes a login form and a total of four pages: home page, about us page, events page, and account details page. <br>
-                This is just a front-end website, and everything here is hard-coded.
+      <h2>Focus of the Project</h2>
+      <p class="image-description">
+        The primary focus of this website is UX design. <br>
+        A total of 16 design prototypes were made to determine
+        the most suitable format to convey information to readers, structuring and formatting the information in a way that users can get a clear grasp
+        of NYP Primers just by skimming through the web pages.
         </p>
+
+        <h2>Technologies used</h2>
+        <p class="image-description">
+        HTML, CSS, JavaScript, Bootstrap
+        </p>
+
+        <h2>Project description</h2>
+
+        <div class="project-row">
+          <div class="image-description">
+                This project is a public website for NYP Primers, a school CCA club. <br>
+                
+                The target users of this website are:
+                <ol>
+                  <li>new NYP students who want to know more about NYP Primers</li>
+                  <li>NYP Primers members (to enroll/ withdraw from events)</li>
+                </ol> 
+                The purpose of this website is to showcase what NYP Primers is and to facilitate club activities. <br>
+                The color theme used in this website is the sunset color to reflect the warmth of NYP Primers. <br>
+                This project includes a total of four pages: 
+                <ol>
+                  <li><a href="#home-page">Home Page</a></li>
+                  <li><a href="#about-us-page">About Us Page</a></li>
+                  <li><a href="#events-page">Events Page</a></li>
+                  <li><a href="#account-details-page">Account Details Page</a></li>
+                </ol> 
+                This is just a front-end website. Everything here is hard-coded.
+          </div>
+
+          <div class="img-container" id="overview-img-container">
+              <img src="assets/nyp_primers/ndp.jpg" alt="NYP Primers Screenshot">
+          </div>
+        </div>
+        
     </div>
 
     
 
     <div class="project-content">
-        <div class="section-overview">
+        <div class="section-overview" id="home-page">
             <h2>Home Page</h2>
             <p class="image-description">
-                The home page is designed to give an overview of what NYP Primers is and a little sneak peek into other pages.
+                The home page is designed to give an overview of what NYP Primers is and a little sneak peek into other pages. 
+                This page is carefully designed with the right amount of information to keep the users engaged. 
+                Very little amount of information will lead to uninformative home page, while overloading information can scare the user away.
             </p>
-            <div class="page-content">
+        </div>
+
+        <div class="page-content">
                 <div class="home project-row">
                     <div class="img-container">
                         <img src="assets/nyp_primers/home.png" alt="NYP Primers Screenshot">
@@ -176,31 +115,108 @@
                     </div>   
                 </div>
             </div>
-        </div>
 
         
 
-        <div class="section-overview">
+        <div class="section-overview" id="about-us-page">
             <h2>About Us Page</h2>
             <p class="image-description">
-                Sign up form, which can be called by pressing 'Join Us' button and the user account page are included in this section.
+                This page aims to show the users what NYP Primers is like and introduce the core members of NYP Primers along with its accomplishments.
+                This page has more detailed information compared to home page because this is where users actually learn about NYP Primers.
             </p>
         </div>
 
-        <div class="section-overview">
+        <div class="page-content">
+              <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/aboutus.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        The first section users will see is "What We Are" section. <br>
+                        The information is formatted clearly to give users a sense of structure and clarity, so as to not visually overwhelm them with information.         
+                      </p>
+
+                    </div>   
+                </div>
+
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/exco.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        Then, users will be introduced to the current exco members of NYP Primers. <br>
+                        This also is structured and designed with careful thought to not overhwhelm the user with names and positions.          
+                      </p>
+
+                    </div>   
+                </div>
+
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/nyp_primers/accomplishments.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        The accomplishments of NYP Primers will be listed at the end of the page. <br>
+                        A timeline format is used to list the accomplishments to give the readers a clear sense of accomplishments over time.           
+                      </p>
+
+                    </div>   
+                </div>
+            </div>
+
+        <div class="section-overview" id="events-page">
             <h2>Events Page</h2>
             <p class="image-description">
-                Sign up form, which can be called by pressing 'Join Us' button and the user account page are included in this section.
+                The purpose of this page is to share the events and activities held by NYP Primers. <br>
+                This page is designed in such a way that users get a clear overview of all the events first, 
+                before they learn about the details of each event. 
             </p>
         </div>
 
-        <div class="section-overview">
+        <div class="page-content">
+              <div class="home project-row">
+                  <div class="img-container">
+                      <img src="assets/nyp_primers/upcoming_events.png" alt="NYP Primers Screenshot">
+                  </div>
+              
+                  <div class="image-description">
+                    <p>
+                      The event overviews are catgorised into two groups: upcoming events and recent events so that readers get an understanding of the events timeline. <br>
+                      Each event overview is then displayed in a card to give the readers a clear and consistent structure. <br>
+                      In each card, an image is added to engage the engage the readers and the right amount of sentence length is used to give the readers a clear
+                      summary of what the event is about. <br>
+                      If the readers want to learn more about an event, they just need to click on it, and they will be led to the following event details section.
+                    </p>
+                  </div>   
+              </div>
+              <div class="home project-row">
+                  <div class="img-container">
+                      <img src="assets/nyp_primers/event-details.png" alt="NYP Primers Screenshot">
+                  </div>
+              
+                  <div class="image-description">
+                    <p>
+                      In the event details section, the information are clearly formatted and labelled so that readers coukd skim through the details.<br>
+                      In addition, the key information is written in primary color to capture the attention of the readers as they skim.        
+                    </p>
+                  </div>   
+              </div>
+          </div>
+
+        <div class="section-overview" id="account-details-page">
             <h2>Account Details Page</h2>
             <p class="image-description">
-                Sign up form, which can be called by pressing 'Join Us' button and the user account page are included in this section.
+                This page is meant to show the account details of NYP Primers members.
             </p>
+        </div>
 
-            <div class="page-content">
+        <div class="page-content">
                 <div class="home project-row">
                     <div class="img-container">
                         <img src="assets/nyp_primers/login.png" alt="NYP Primers Screenshot">
@@ -208,9 +224,9 @@
                 
                     <div class="image-description">
                       <p>
-                        This is the sign up form, for those who want to join NYP Primers club. 
-                        This is not a typical sign up form that helps users create an account. 
-                        Instead, submitting this form will send an application form to NYP Primers, and the user will become a member if  approved.
+                        Similar text fields are grouped together and arranged in a logical flow for seamless transition between the text fields. <br>
+                        In addition, a subtle line is added between the personal detail text fields and emergency contact text fields so that readers 
+                        know that they belong to two different logical groups.
                       </p>
 
                     </div>   
@@ -224,7 +240,8 @@
                     <div class="image-description">
                       <p>
                         This is the account details page, where members of the club can see their details and the CCA points they have earned.
-                        The CCA point system is designed in accordance with NYP CCA point system (PEARLS).
+                        Consistent grouping is used here as well, where the personal details are shown in a different column from the emergency details. <br>
+                        The same subtle line is used in this section, this time to separate the member details and the CCA points.
                       </p>
 
                     </div>   
@@ -237,23 +254,20 @@
                 
                     <div class="image-description">
                       <p>
-                        This is the account details page, where members of the club can see their details and the CCA points they have earned.
-                        The CCA point system is designed in accordance with NYP CCA point system (PEARLS).
+                        Members will also be able to view their enrolled events as well. <br>
+                        Table format is used here to give a compact view to the readers. <br>
+                        The upcoming and recent events are separated in different tables so that members can find what they want easily. 
                       </p>
 
                     </div>   
                 </div>
             </div>
-        </div>
 
 
       
     </div>
 
-    <p class="project-tech">
-                Technologies used: HTML, CSS, JavaScript, Bootstrap
-              </p>
-
   </div>
+
 </body>
 </html>
