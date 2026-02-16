@@ -3,79 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meod E-commerce App</title>
+  <title>E-commerce Project</title>
   <link rel="stylesheet" href="home.css">
-  <style>
-    .project-page {
-      color: #f5f5f5;
-      font-family: 'Roboto', sans-serif;
-      padding: 60px 20px;
-      background-color: #0f111a;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .project-page h1 {
-      color: #00ffd5;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .project-page img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      object-fit: cover;
-    }
-
-    .project-description {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .project-tech {
-      font-size: 1rem;
-      color: #00ffd5;
-      margin-bottom: 40px;
-    }
-
-    .back-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #00ffd5;
-      color: #0f111a;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .back-btn:hover {
-      background-color: #00bfa1;
-    }
-  </style>
-  <script>
-    function goBack() {
-      window.location.href = 'index.html';
-    }
-  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="project-page">
-    <h1>E-commerce Web App (Staff-side)</h1>
-    <img src="assets/meod/orders_page.png" alt="Meod App Screenshot">
-    <p class="project-description">
-      This is a full-stack e-commerce web application designed for Meod Farm. 
-      It allows staff to manage orders, track inventory, and streamline 
-      day-to-day business operations through an intuitive interface.
-    </p>
-    <p class="project-tech">
-      Technologies used: HTML, CSS, JavaScript, PHP, MySQL, Bootstrap
-    </p>
-    <a class="back-btn" href="home.html">← Back to Home</a>
+
+    <div class="project-header">
+      <a class="back-btn" href="index.html">← Back</a>
+      <h1 class="project-title">E-commerce Web App (Staff-side)</h1>
+    </div>
+
+    <div class="project-overview">
+      <h2>Focus of the Project</h2>
+      <p class="image-description">
+        The primary focus of this website is backend functionality. <br>
+        Supabase database and authentication are used to provide fundamental functionalities to this web app.
+        Python is used to create APIs to supabase, to be used by JavaScript.
+        </p>
+
+        <h2>Technologies used</h2>
+        <p class="image-description">
+        Python, Flask, Jinja2, HTML, CSS, JavaScript, Bootstrap
+        </p>
+
+        <h2>Project description</h2>
+
+        <div class="project-row">
+          <div class="image-description">
+                This project is an e-commerce web app for Meod Farm. <br>
+                
+                The target users of this website are Meod Farm staff and managers.
+                The purpose of this website is to provide technological solutions to Meod Farm's business operations. <br>
+                The color theme used in this website is white and cyan colors to match Meod Farm logo. <br>
+                This project includes a total of three pages: 
+                <ol>
+                  <li><a href="#auth-page">Authentication Page</a></li>
+                  <li><a href="#dashboard">Dashboard</a></li>
+                  <li><a href="#order-preparation-page">Order Preparation Page</a></li>
+                  <li><a href="#inventory-management-page">Inventory Management Page</a></li>
+                </ol> 
+                This is a full-stack website. Everything here is functional.
+                For context, Meod Farm is a business that sells vegetables and meat through a e-commerce platform.
+          </div>
+
+          <div class="img-container" id="meod-overview-img-container">
+              <img src="assets/meod/meod_description.png" alt="">
+          </div>
+        </div>
+        
+    </div>
+
+    
+
+    <div class="project-content">
+        <div class="section-overview" id="auth-page">
+            <h2>Authentication Page</h2>
+            <p class="image-description">
+                The authentication page is designed to check check user credentials against existing accounts
+                from supabase authentication system. If bypassed, the user is granted access based on the 'Staff' table of supabase.
+            </p>
+        </div>
+
+        <div class="page-content">
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/meod/auth.png" alt="">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        This is the UI of the authentication page. <br>
+                        Strictly, no user account is allowed for security purposes. <br>
+                        The credentials users input are passed to supabase using parameterized statements queries to prevent SQL injection attacks.             
+                      </p>
+
+                    </div>   
+                </div>
+            
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/meod/supabase_auth.png" alt="">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        This is the authentication system of supabase. <br>
+                        User credentials are checked against this table to authenticate users. <br>
+                        Passwords are handled by supabase. Not even admins have access to the them to minimize damage if compromised. <br>
+                        Note: The data in the image are just test data. They are not actual staff data.
+                      </p>
+
+                    </div>   
+                </div>
+            
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/meod/auth_role.png" alt="NYP Primers Screenshot">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        To provide role-based authentication, the roles of users along with their personal information 
+                        are stored in a separate staff table. <br>
+                        In other words, authentication occurs twice before granting access to the system. <br>
+                        Even if users could bypass the supabase authentication system,
+                        they won't get access to the system unless their IDs are not in the staff table.        
+                      </p>
+
+                    </div>   
+                </div>
+            </div>
+
+        
+
+        <div class="section-overview" id="dashboard">
+            <h2>Dashboard</h2>
+            <p class="image-description">
+                This page is accessible only to admins and is used to gain insights into business operations.
+                The key feature of this page is the drill down feature of the visuals, which can be drilled from monthly view
+                all the way down to individual orders.
+            </p>
+        </div>
+
+        <div class="page-content">
+            <div class="home project-row">
+                    <div class="img-container">
+                        <video width="400" controls autoplay>
+                          <source src="assets/meod/dashboard.mp4" type="video/mp4">
+                          Your browser does not support HTML video.
+                        </video>
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        The video features the drill down feature of the visuals. <br>
+                        This drill down feature give invaluable business insights as it can visualise all data to the most detailed point.
+                        It also propagates the filters to the other visuals as well.         
+                      </p>
+
+                    </div>   
+              </div>
+          </div>
+
+        <div class="section-overview" id="order-preparation-page">
+            <h2>Order Preparation Page</h2>
+            <p class="image-description">
+                The purpose of this page is to assist the order preparation operations of Meod Farm. <br>
+                This page is designed in such a way that users can search by order number, order id, filter by status, and time.
+            </p>
+        </div>
+
+        <div class="page-content">
+              <div class="home project-row">
+                  <div class="img-container">
+                      <img src="assets/meod/orders_page.png" alt="">
+                  </div>
+              
+                  <div class="image-description">
+                    <p>
+                      The search bar is placed at the very top to imply that the search overrides the filters. <br>
+                      The time filter is placed below the search and status filter, implying that it does not overriide the latter two. <br>
+                      When preparing the orders, the staff need to click on the orders to modify their status.
+                    </p>
+                  </div>   
+              </div>
+              <div class="home project-row">
+                  <div class="img-container">
+                      <img src="assets/nyp_primers/event-details.png" alt="NYP Primers Screenshot">
+                  </div>
+              
+                  <div class="image-description">
+                    <p>
+                      This search and filter feature can save both time and effort when staff are required to find a specific order.        
+                    </p>
+                  </div>   
+              </div>
+          </div>
+
+        <div class="section-overview" id="inventory-management-page">
+            <h2>Inventory Management Page</h2>
+            <p class="image-description">
+                This page is meant to assist Meod Farm in managing their inventory. <br>
+                It allows for sorting products, adding new products, editing, and deleting existiing products.
+                Generative AI is used to auto-generate product name and description as well as checking if the product image and name matches.
+            </p>
+        </div>
+
+        <div class="page-content">
+                <div class="home project-row">
+                    <div class="img-container">
+                        <img src="assets/meod/inventory_management.png" alt="">
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        Low-quantity products are highlighted to capture the attention of the users checking the inventory. <br>
+                        "Add new product" button is placed at the very top to imply that it does not associate with any exisiting products.
+                        Meanwhile, the edit and delete buttons are placed in the same row as their respective products. 
+                      </p>
+
+                    </div>   
+                </div>
+            
+                <div class="home project-row">
+                    <div class="img-container">
+                        <video width="400" controls autoplay muted>
+                          <source src="assets/meod/inventory_demo.mp4" type="video/mp4">
+                          Your browser does not support HTML video.
+                        </video>
+                    </div>
+                
+                    <div class="image-description">
+                      <p>
+                        This video demonstrates product sorting, creating new product, the use of Generative AI to generate product name and description, 
+                        editing, and deleting a product.
+                      </p>
+
+                    </div>   
+                </div>
+            </div>
+
+
+      
+    </div>
+
   </div>
+
 </body>
 </html>
